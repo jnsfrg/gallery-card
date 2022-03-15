@@ -43,8 +43,6 @@ class GalleryCard extends LitElement {
                   html`` : html`<span class="duration"></span>` }
               </figcaption>
             </figure>  
-            <button class="btn btn-left" @click="${ev => this._selectResource(this.currentResourceIndex-1)}">&lt;</button> 
-            <button class="btn btn-right" @click="${ev => this._selectResource(this.currentResourceIndex+1)}">&gt;</button> 
           </div>
           <div class="resource-menu">
             ${this.resources.map((resource, index) => {
