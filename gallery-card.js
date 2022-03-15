@@ -347,6 +347,11 @@ class GalleryCard extends LitElement {
           //HA Folder component
           if (entityState.attributes.file_list != undefined)
             commands.push(this._loadFilesResources(entityState.attributes.file_list, maximumFiles, fileNameFormat, captionFormat, captionLeadingZeros, reverseSort));
+          
+          
+          //Custom media Sensor
+          if (entityState.attributes.media != undefined)
+            commands.push(this._loadMediaResource(hass, entityState.attributes.media, maximumFiles, fileNameFormat, captionFormat, captionLeadingZeros, false, reverseSort));
         }
       }
     });
