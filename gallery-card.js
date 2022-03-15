@@ -426,13 +426,13 @@ class GalleryCard extends LitElement {
 
   _loadMedia(ref, hass, contentId, maximumFiles, recursive, reverseSort) {
     var mediaItem = {
-      media_class: "directory",
+      media_class: "image",
       media_content_id: contentId
     };
 
-    if (contentId.substring(contentId.length - 1, contentId.length) != "/" && contentId != "media-source://media_source") {
-      mediaItem.media_content_id += "/";
-    }
+    // if (contentId.substring(contentId.length - 1, contentId.length) != "/" && contentId != "media-source://media_source") {
+    //   mediaItem.media_content_id += "/";
+    // }
 
     return Promise.all(this._fetchMedia(ref, hass, mediaItem, recursive))
       .then(function(values) { 
